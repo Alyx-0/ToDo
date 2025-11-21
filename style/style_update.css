@@ -1,0 +1,18 @@
+*{
+    font-family: "Inter";
+}
+
+.header-update{
+    text-align: center;
+    font-size: 50px;
+}
+
+.form-update{
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+.form-update input{
+    font-size: 30px;
+}
