@@ -1,0 +1,20 @@
+*{
+    font-family: "Inter";
+}
+
+.header-planner{
+    text-align: center;
+    font-size: 50px;
+}
+
+.table-planner table, th, td{
+    margin: auto;
+    border: 1px, solid black;
+    font-size: 30px;
+}
+.table-planner form{
+    text-align: center;
+}
+.table-planner input{
+    font-size: 30px;
+}

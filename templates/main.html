@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planner</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+        <link rel="stylesheet" href="style/style_main.css">
+    </head>
+    <body>
+        <div class="header-planner">
+            <h1>My Planner</h1>
+        </div>
+        <div class="table-planner">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+                {% for data in tasks %}
+                    <tr>
+                        <td>{{data.id}}</td>
+                        <td>{{data.task}}</td>
+                        <td>{{data.deadline}}</td>
+                        <td>{{data.date}}</td>
+                        <td><a href="/delete/{{data.id}}">Delete</a><a href="/update-page/{{data.id}}">Update</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="table-planner">
+            <form action="/add" method="POST">
+                <input type="text" name="task">
+                <input type="datetime-local" name="deadline">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
